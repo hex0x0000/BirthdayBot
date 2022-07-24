@@ -3,3 +3,4 @@
 *-wal
 .env
 *.lock
+result
