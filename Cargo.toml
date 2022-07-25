@@ -29,5 +29,4 @@ anyhow = "1.0.58"
 dotenv = "0.15.0"
 async_once = "0.2.6"
 chrono = "0.4"
-[dependencies]
 openssl = { version = "0.10", features = ["vendored"] }
