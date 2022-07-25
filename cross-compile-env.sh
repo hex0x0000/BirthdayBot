@@ -2,7 +2,7 @@
 
 IMAGE="multiarch/debian-debootstrap:arm64-bullseye"
 
-sudo docker run --privileged --rm tonistiigi/binfmt --install qemu-aarch64
+sudo docker run --privileged --rm multiarch/qemu-user-static:register
 
 docker pull $IMAGE
 
