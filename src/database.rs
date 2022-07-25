@@ -27,19 +27,27 @@ pub struct Birthday {
 
 impl Database {
     pub async fn new() -> anyhow::Result<Self> {
-        if !PathBuf::from("birthday.db").exists() {
-            File::create("birthdays.db")
+        let database_url = env::var("DATABASE_URL").expect("DATABASE_URL env var not found");
+        let database_path = PathBuf::from({
+            // Removes sqlite from sqlite:/path/to/database.db
+            let mut copy: Vec<&str> = database_url.split(':').collect();
+            if copy.remove(0) == "sqlite" {
+                copy.join(":")
+            } else {
+                panic!("Invalid DATABASE_URL, it must be sqlite:/path/to/database.db");
+            }
+        });
+        if !database_path.exists() {
+            File::create(database_path)
                 .await
                 .context("Failed to create DB file")?
                 .write_all(DB_FILE)
                 .await
                 .context("Failed to write to DB file")?;
         }
-        let pool = SqlitePool::connect(
-            &env::var("DATABASE_URL").context("DATABASE_URL env var not found")?,
-        )
-        .await
-        .context("Failed to create DB connection")?;
+        let pool = SqlitePool::connect(&database_url)
+            .await
+            .context("Failed to create DB connection")?;
         sqlx::migrate!("./migrations")
             .run(&pool)
             .await

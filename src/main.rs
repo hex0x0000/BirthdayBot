@@ -6,8 +6,8 @@ mod globals;
 mod lang;
 mod lookup;
 mod macros;
-use crate::commands::*;
 use crate::lookup::initialize;
+use crate::{commands::*, database::Database};
 use anyhow::Context;
 use chrono::{prelude::*, Duration};
 use database::RemoveBirthday;
@@ -158,7 +158,10 @@ async fn main() {
     pretty_env_logger::init();
     log::info!("birthday-bot Copyright (C) 2022 Valentino Peggi");
     log::info!("This program comes with ABSOLUTELY NO WARRANTY");
-    log::info!("This is free software, and you are welcome to redistribute it under certain conditions");
+    log::info!(
+        "This is free software, and you are welcome to redistribute it under certain conditions"
+    );
+    Database::new().await.unwrap();
     let mut lookup_server = match initialize().await {
         Ok(child) => child,
         Err(err) => {

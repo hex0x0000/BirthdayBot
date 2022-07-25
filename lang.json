@@ -17,7 +17,7 @@
         "DONE": "Done."
     },
     "it": {
-        "HELP": "Comandi:\n/help -- mostra i comandi disponibili\n/start -- avvia il bot\n/addmybirthday -- aggiunge il tuo compleanno (AAAA/MM/GG). Esempio /addmybirthday 01/01/2000\n/addbirthday -- aggiunge il compleanno di qualcun altro. Esempio /addbirthday @user 01/01/2000\n/removemybirthday -- rimuove il tuo compleanno\n/removegroup -- rimuove i compleanni di tutto il gruppo (solo per admin)\n/removeallmybirthdays -- rimuove i compleanni da qualsiasi gruppo",
+        "HELP": "Comandi:\n/help -- mostra i comandi disponibili\n/start -- avvia il bot\n/addmybirthday -- aggiunge il tuo compleanno (AAAA/MM/GG). Esempio /addmybirthday 2000/01/01\n/addbirthday -- aggiunge il compleanno di qualcun altro. Esempio /addbirthday @user 2000/01/01\n/removemybirthday -- rimuove il tuo compleanno\n/removegroup -- rimuove i compleanni di tutto il gruppo (solo per admin)\n/removeallmybirthdays -- rimuove il tuo compleanno da qualsiasi gruppo",
         "START_MESSAGE_PVT": "Ciao! Questo bot farà gli auguri di buon compleanno nei gruppi 🎂. Aggiungimi a un gruppo e scrivi /start. Usa /help per vedere i comandi disponibili",
         "START_MESSAGE_GRP": "Grazie! Ora puoi usare /addbirthday o /addmybirthday per aggiungere il tuo compleanno o quello di altre persone",
         "INFO": "Questo bot è stato creato da @hex0x0000. Il codice si trova a https://git.bounceme.net/hex0x0000/BirthdayBot con licenza GPL3. Se vuoi aggiungere/migliorare delle traduzioni puoi unirti e aprire delle issues o PRs. <a href=\"https://www.flaticon.com/free-icons/cake\">Cake icons created by Freepik - Flaticon</a>",
@@ -31,7 +31,7 @@
         "ERR_DENIED": "Devi essere amministratore per eseguire questo comando",
         "BIRTHDAY_EXISTS": "Il tuo compleanno era già stato aggiunto in questo gruppo",
         "BIRTHDAY_ADD_SUCCESS": "Compleanno aggiunto!",
-        "WISH_HAPPY_BDAY": "Buon compleanno & 🎂🎂🎂! Ora hai compiuto & anni! (& UTC time)",
+        "WISH_HAPPY_BDAY": "Buon compleanno & 🎂🎂🎂! Auguri per i tuoi & anni! (& UTC time)",
         "DONE": "Fatto."
     }
 }

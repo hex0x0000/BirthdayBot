@@ -13,7 +13,7 @@ use teloxide::{
     utils::command::BotCommands,
 };
 
-#[derive(BotCommands, Clone)]
+#[derive(BotCommands, Clone, Debug)]
 #[command(rename = "lowercase", description = "Commands:")]
 pub enum Command {
     #[command(description = "displays available commands")]
@@ -22,10 +22,10 @@ pub enum Command {
     Start,
     #[command(description = "bot's info")]
     Info,
-    #[command(description = "adds your birthday (YYYY/MM/DD). Example /addmybirthday 01/01/2000")]
+    #[command(description = "adds your birthday (YYYY/MM/DD). Example /addmybirthday 2000/01/01")]
     AddMyBirthday(String),
     #[command(
-        description = "adds someone else's birthday (YYYY/MM/DD). Example /addbirthday @user 01/01/2000",
+        description = "adds someone else's birthday (YYYY/MM/DD). Example /addbirthday @user 2000/01/01",
         parse_with = "split"
     )]
     AddBirthday { username: String, date: String },
@@ -47,7 +47,7 @@ pub async fn answer(bot: Bot, message: Message, command: Command) -> anyhow::Res
         },
         None => "en".to_string(),
     };
-
+    log::info!("Issued command: {:?}", command);
     match command {
         Command::Help => {
             send!(bot, message.chat.id, &lang, "HELP");

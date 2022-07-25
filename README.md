@@ -33,7 +33,7 @@ $ mv target/release/birthday-bot /path/to/server/files # anywhere you want, as l
 ## Running
 ```bash
 $ export TELOXIDE_TOKEN="your telegram token made with BotFather here"
-$ export DATABASE_URL="/path/to/birthdays.db"
+$ export DATABASE_URL="sqlite:/path/to/birthdays.db"
 $ export RUST_LOG="info" # if you want the log level to be info
 $ cd /path/to/server/files
 $ ./birthday-bot # the first time it must be run manually because you have to login into telegram, after that you can call it from any init script you want (as long as the program has access to $PATH and the other exported variables)

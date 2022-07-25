@@ -10,7 +10,6 @@ pkgs.mkShell {
   buildInputs = with pkgs; [
     rust_channel
     rustfmt
-    openssl
     pkg-config
     cargo-crev
     python39
