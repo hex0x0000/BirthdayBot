@@ -29,10 +29,13 @@ $ mv username_lookup/config.json.example username_lookup/config.json
 $ vim username_lookup/config.json # insert your api_id and api_hash here
 ```
 
-## Compiling and setup
+## Compiling
 ```bash
+$ export TELOXIDE_TOKEN="your token here"
+$ export DATABASE_URL="/path/to/birthdays.db"
+$ export RUST_LOG="info" # if you want the log level to be info
 $ cargo build --release
 $ mv target/release/birthday-bot /path/to/server/files # anywhere you want, as long as the program has enough permissions to write on the same directory
 $ cd /path/to/server/files
-$ ./birthday-bot # the first time it must be run manually because you have to login into telegram, after that you can call it from any init script you want (as long as the program has access to $PATH)
+$ ./birthday-bot # the first time it must be run manually because you have to login into telegram, after that you can call it from any init script you want (as long as the program has access to $PATH and the other exported variables)
 ```
