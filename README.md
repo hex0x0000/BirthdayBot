@@ -1,7 +1,7 @@
 # BirthdayBot
 A Telegram Bot that wishes happy birthdays in groups.
 
-[Official instance](t.me/happybirthday_bbot)
+[Official instance](https://t.me/happybirthday_bbot)
 
 # How to create your own instance
 ## Dependencies
@@ -16,7 +16,7 @@ On any other distro:
 3. Install gcc, perl, perl-core and make (on the compiling machine)
 
 ## Obtaining necessary tokens
-1. Make a new bot with [BotFather](t.me/BotFather).
+1. Make a new bot with [BotFather](https://t.me/BotFather).
 2. Make a new [Telegram Application](https://core.telegram.org/api/obtaining_api_id).
 After that:
 ```bash
