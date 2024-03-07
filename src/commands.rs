@@ -1,9 +1,8 @@
-// Copyright: https://git.bounceme.net/hex0x0000/BirthdayBot/src/branch/master/LICENSE
+// Copyright: https://github.com/hex0x0000/BirthdayBot/src/branch/master/LICENSE
 use std::num::ParseIntError;
 
 use crate::database::RemoveBirthday;
 use crate::globals::{Bot, DB, LABELS};
-use crate::lookup::{get_id, is_username_valid};
 use crate::send;
 use anyhow::Context;
 use teloxide::types::{MessageEntityKind, ParseMode};
@@ -14,26 +13,39 @@ use teloxide::{
 };
 
 #[derive(BotCommands, Clone, Debug)]
-#[command(rename = "lowercase", description = "Commands:")]
+#[command(description = "Bot's commands:")]
 pub enum Command {
-    #[command(description = "displays available commands")]
+    #[command(description = "displays available commands", rename = "lowercase")]
     Help,
-    #[command(description = "starts bot")]
+    #[command(description = "starts bot", rename = "lowercase")]
     Start,
-    #[command(description = "bot's info")]
+    #[command(description = "bot's info", rename = "lowercase")]
     Info,
-    #[command(description = "adds your birthday (YYYY/MM/DD). Example /addmybirthday 2000/01/01")]
+    #[command(
+        description = "adds your birthday (YYYY/MM/DD). Example /addmybirthday 2000/01/01",
+        rename = "lowercase"
+    )]
     AddMyBirthday(String),
     #[command(
         description = "adds someone else's birthday (YYYY/MM/DD). Example /addbirthday @user 2000/01/01",
-        parse_with = "split"
+        parse_with = "split",
+        rename = "lowercase"
     )]
     AddBirthday { username: String, date: String },
-    #[command(description = "removes your birthday from a group")]
+    #[command(
+        description = "removes your birthday from a group",
+        rename = "lowercase"
+    )]
     RemoveMyBirthday,
-    #[command(description = "removes all the group's birthdays (admins only)")]
+    #[command(
+        description = "removes all the group's birthdays (admins only)",
+        rename = "lowercase"
+    )]
     RemoveGroup,
-    #[command(description = "removes your birthdays from any group")]
+    #[command(
+        description = "removes your birthdays from any group",
+        rename = "lowercase"
+    )]
     RemoveAllMyBirthdays,
 }
 

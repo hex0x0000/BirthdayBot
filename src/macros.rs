@@ -1,4 +1,4 @@
-// Copyright: https://git.bounceme.net/hex0x0000/BirthdayBot/src/branch/master/LICENSE
+// Copyright: https://github.com/hex0x0000/BirthdayBot/src/branch/master/LICENSE
 #[macro_export]
 macro_rules! send {
     ($bot:expr, $chat_id:expr, $lang:expr, $msg:expr) => {

@@ -2,7 +2,7 @@
     "en": {
         "START_MESSAGE_PVT": "Hi! This bot will wish happy birthdays in groups 🎂. Add me to a group and type /start. Type /help to see available commands",
         "START_MESSAGE_GRP": "Thank you! Now you can use /addbirthday or /addmybirthday to add your birthday or other people's birthdays",
-        "INFO": "This bot was made by @hex0x0000. You can find the source code at https://git.bounceme.net/hex0x0000/BirthdayBot licensed under GPL3. If you want to add/improve translations or report bugs feel free to join and open issues or PRs. <a href=\"https://www.flaticon.com/free-icons/cake\">Cake icons created by Freepik - Flaticon</a>",
+        "INFO": "This bot was made by @hex0x0000. You can find the source code at https://github.com/hex0x0000/BirthdayBot licensed under GPL3. If you want to add/improve translations or report bugs feel free to join and open issues or PRs. <a href=\"https://www.flaticon.com/free-icons/cake\">Cake icons created by Freepik - Flaticon</a>",
         "NO_PIN_PERM": "You must give me the permission to pin messages.",
         "ERR_INVALID_DATE": "Invalid date, it must be formatted as year/month/day",
         "ERR_COULDNT_GET_USERID": "Sorry, I couldn't get user's id. :'(",
@@ -20,7 +20,7 @@
         "HELP": "Comandi:\n/help -- mostra i comandi disponibili\n/start -- avvia il bot\n/addmybirthday -- aggiunge il tuo compleanno (AAAA/MM/GG). Esempio /addmybirthday 2000/01/01\n/addbirthday -- aggiunge il compleanno di qualcun altro. Esempio /addbirthday @user 2000/01/01\n/removemybirthday -- rimuove il tuo compleanno\n/removegroup -- rimuove i compleanni di tutto il gruppo (solo per admin)\n/removeallmybirthdays -- rimuove il tuo compleanno da qualsiasi gruppo",
         "START_MESSAGE_PVT": "Ciao! Questo bot farà gli auguri di buon compleanno nei gruppi 🎂. Aggiungimi a un gruppo e scrivi /start. Usa /help per vedere i comandi disponibili",
         "START_MESSAGE_GRP": "Grazie! Ora puoi usare /addbirthday o /addmybirthday per aggiungere il tuo compleanno o quello di altre persone",
-        "INFO": "Questo bot è stato creato da @hex0x0000. Il codice si trova a https://git.bounceme.net/hex0x0000/BirthdayBot con licenza GPL3. Se vuoi aggiungere/migliorare delle traduzioni puoi unirti e aprire delle issues o PRs. <a href=\"https://www.flaticon.com/free-icons/cake\">Cake icons created by Freepik - Flaticon</a>",
+        "INFO": "Questo bot è stato creato da @hex0x0000. Il codice si trova a https://github.com/hex0x0000/BirthdayBot con licenza GPL3. Se vuoi aggiungere/migliorare delle traduzioni puoi unirti e aprire delle issues o PRs. <a href=\"https://www.flaticon.com/free-icons/cake\">Cake icons created by Freepik - Flaticon</a>",
         "NO_PIN_PERM": "Devi darmi il permesso di fissare i messaggi.",
         "ERR_INVALID_DATE": "Data non valida, deve essere formattata come anno/mese/giorno.",
         "ERR_COULDNT_GET_USERID": "Scusa, non ho trovato l'user id :'(",

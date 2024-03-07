@@ -1,6 +1,7 @@
-// Copyright: https://git.bounceme.net/hex0x0000/BirthdayBot/src/branch/master/LICENSE
+// Copyright: https://github.com/hex0x0000/BirthdayBot/src/branch/master/LICENSE
 use json::*;
 
+#[derive(Debug)]
 pub struct Langs {
     json: JsonValue,
 }

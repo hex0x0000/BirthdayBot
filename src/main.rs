@@ -1,12 +1,10 @@
-// Copyright: https://git.bounceme.net/hex0x0000/BirthdayBot/src/branch/master/LICENSE
+// Copyright: https://github.com/hex0x0000/BirthdayBot/src/branch/master/LICENSE
 #[macro_use]
 mod commands;
 mod database;
 mod globals;
 mod lang;
-mod lookup;
 mod macros;
-use crate::lookup::initialize;
 use crate::{commands::*, database::Database};
 use anyhow::Context;
 use chrono::{prelude::*, Duration};
@@ -162,18 +160,9 @@ async fn main() {
         "This is free software, and you are welcome to redistribute it under certain conditions"
     );
     Database::new().await.unwrap();
-    let mut lookup_server = match initialize().await {
-        Ok(child) => child,
-        Err(err) => {
-            log::error!("Error while initializing: {}", err);
-            log::error!("Root cause: {}", err.root_cause());
-            return;
-        }
-    };
     let bot = teloxide::Bot::from_env()
         .throttle(Limits::default())
-        .cache_me()
-        .auto_send();
+        .cache_me();
     let bot_clone = bot.clone();
     let handler = tokio::spawn(async move {
         let bot = bot_clone;
@@ -198,6 +187,5 @@ async fn main() {
         }
     });
     teloxide::commands_repl(bot, answer, Command::ty()).await;
-    lookup_server.kill().await.log_on_error().await;
     handler.abort();
 }

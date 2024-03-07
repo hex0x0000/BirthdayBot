@@ -1,5 +1,0 @@
-bin/
-lib/
-pyvenv.cfg
-config.json
-*.session*
